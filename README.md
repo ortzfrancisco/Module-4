@@ -10,7 +10,6 @@ N/A
 
 ## Usage
 
-Navigate to https://dgomie.github.io/coding-quiz/.
 
 Click the "Start Quiz" button to start the timer and begin the quiz.
 
