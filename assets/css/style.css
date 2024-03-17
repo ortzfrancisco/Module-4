@@ -1,0 +1,163 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    --dark: rgb(73, 5, 137);
+    --light: rgb(179, 70, 175);
+    --highScore: rgb(122, 60, 120);
+    --white: azure;
+}
+main {
+    padding: 10px;
+}
+/* Includes 'view high scores' link and timer element */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+}
+
+p, label{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+li {
+    display: block;
+    text-align: center;
+    background-color: var(--dark);
+    color: var(--white);
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    margin: 5px;
+}
+
+hr {
+    width: 100%;
+}
+
+/* Pop refers to the feedback user gets when answering question*/
+.pop {
+    align-self: flex-start;
+    justify-content: flex-end;
+    font-style: oblique;
+    color: gray;
+    font-size: larger;
+    padding: 10px;
+}
+
+.button {
+    padding: 10px;
+    width: auto;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--dark);
+    font-size: larger;
+}
+
+.hsButton {
+    padding: 10px;
+    margin: 5px;
+    width: auto;
+    font-size: medium;
+}
+
+.hsContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button:hover, li:hover {
+    background-color: var(--light);
+}
+
+.scoreCard {
+    color: var(--white);
+    background-color: var(--highScore);
+    border-radius: 5px;
+    border-radius: 0px;
+    width: 50%;
+}
+
+.submitFormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 25px;
+}
+
+.submitFormContainer #submit-btn {
+    font-size: medium;
+    padding: 3px;
+    width: 65px;
+}
+
+.submitFormContainer input {
+    width: 200px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.submitFormContainer label {
+    margin-right: 0px;
+}
+
+#container {
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;  
+}
+
+#highScores {
+    text-decoration: underline;
+}
+
+#highScores:hover {
+    color: var(--highScore);
+}
+
+#timer {
+    position: absolute;
+    right: 10%;
+}
+
+/* Adjusts Initial submission to fit on smallers screens */
+@media screen and (max-width: 576px) {
+    
+    /* Mainly needed to center up the input and submit button at end of quiz */
+    .submitFormContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .submitFormContainer input {
+        margin: auto;
+        margin-bottom: 10%;
+        padding: auto;
+        padding-left: 12%;
+
+    }
+
+    .submitFormContainer label {
+        margin: 0px;
+    }
+
+    .submitFormContainer #submit-btn {
+        margin-left: 12%;
+    }
+}
